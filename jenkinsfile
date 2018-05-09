@@ -3,7 +3,7 @@ pipeline {
     tools {
         maven 'localMaven'
     }
-    agent any
+
     stages{
         stage('Build'){
             steps {
