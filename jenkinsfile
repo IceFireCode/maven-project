@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+        maven 'localMAVEN'
+    }
+    agent any
     stages{
         stage('Build'){
             steps {
