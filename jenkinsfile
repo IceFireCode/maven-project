@@ -5,8 +5,8 @@ pipeline {
     }
 
     parameters{
-        string(name: 'tomcat_dev_ip', defaultvalue: '34.243.42.59', description: 'staging server')
-        string(name: 'tomcat_deploy_ip', defaultvalue: '34.245.233.9', description: 'production server')
+        string(name: 'tomcat_dev_ip', defaultValue: '34.243.42.59', description: 'staging server')
+        string(name: 'tomcat_deploy_ip', defaultValue: '34.245.233.9', description: 'production server')
     }
 
     triggers {
