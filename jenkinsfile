@@ -18,12 +18,12 @@ pipeline {
            parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "scp -i '/Users/paulvancappelle/aws docs/tomcat-demo.pem.txt' **/target/*.war ec2-user@${params.tomcat_dev_ip}:/var/lib/tomcat7/webapps"
+                        sh "scp -i '/Users/paulvancappelle/aws docs/tomcat-demo.pem.txt' **/target/*.war ec2-user@${params.tomcat_dev_ip}:/var/lib/tomcat8/webapps"
                     }
                 }
                 stage ("Deploy to Production"){
                     steps {
-                        sh "scp -i '/Users/paulvancappelle/aws docs/tomcat-demo.pem.txt' **/target/*.war ec2-user@${params.tomcat_deploy_ip}:/var/lib/tomcat7/webapps"
+                        sh "scp -i '/Users/paulvancappelle/aws docs/tomcat-demo.pem.txt' **/target/*.war ec2-user@${params.tomcat_deploy_ip}:/var/lib/tomcat8/webapps"
                     }
                  }
              }
